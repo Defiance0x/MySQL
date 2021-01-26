@@ -6,7 +6,7 @@
 
 
 --
--------- Creating Tables --------
+-------- -------- -------- Creating Tables -------- -------- --------
 --
 
 # for commenting!
@@ -33,7 +33,7 @@ ALTER TABLE trucks DROP COLUMN distance_travelled # Drops column called "distanc
 
 
 --
--------- Inserting Data --------
+-------- -------- --------  Inserting Data -------- -------- -------- 
 --
 
 DESCRIBE trucks;
@@ -54,7 +54,7 @@ SELECT * FROM trucks; # selects and shows ALL entries in table trucks
 
 
 --
--------- Constraints --------
+-------- -------- --------  Constraints -------- -------- -------- 
 --
 
 DROP TABLE trucks;
@@ -104,7 +104,7 @@ SELECT * FROM trucks;
 
 
 --
--------- Update & Delete --------
+-------- -------- --------  Update & Delete -------- -------- -------- 
 --
 
 DROP TABLE trucks;
@@ -144,7 +144,7 @@ WHERE truck_name = 'Tim Buxton' AND truck_brand = 'Ford & MG';
 
 
 --
--------- Basic Queries --------
+-------- -------- --------  Basic Queries -------- -------- -------- 
 --
 
 # Introduction into writing queries, such as querying databases with millions of entries
@@ -178,7 +178,7 @@ DROP TABLE trucks;
 
 
 --
--------- Creating a Big Database (database taken from CodeAcademy) --------
+-------- -------- --------  Creating a Big Database (database taken from CodeAcademy) -------- -------- -------- 
 --
 
 CREATE TABLE employee (
@@ -362,7 +362,7 @@ GROUP BY emp_id;
 
 
 --
--------- Wildcards --------
+-------- -------- --------  Wildcards -------- -------- -------- 
 --
 
 -- % = any number of characters before/after, whereas _ = one character
@@ -390,7 +390,7 @@ WHERE birth_day LIKE '____-10%'; # returns any employees born in October since u
 
 
 --
--------- Unions --------
+-------- -------- --------  Unions -------- -------- -------- 
 --
 
 SELECT first_name AS Name FROM employee # if no 'AS name' then the first column selected will keep the 
@@ -413,7 +413,7 @@ SELECT branch_supplier.branch_id, supplier_name FROM branch_supplier;
 
 
 --
--------- Joins --------
+-------- -------- --------  Joins -------- -------- -------- 
 --
 
 INSERT INTO branch VALUES(4, 'Buffalo', NULL, NULL);
@@ -446,7 +446,7 @@ ON employee.emp_id = branch.mgr_id;  # where the "right" table is branch, theref
 
 
 --
--------- Nested Queries --------
+-------- -------- --------  Nested Queries -------- -------- -------- 
 --
 
 SELECT works_with.emp_id 
@@ -477,7 +477,7 @@ WHERE client.branch_id = (
 
 
 --
--------- On Delete --------
+-------- -------- --------  On Delete -------- -------- -------- 
 --
 
 
@@ -523,7 +523,7 @@ SELECT * from branch_supplier;   # hence CASCADE deletes all entries that use th
 
 
 --
--------- Triggers --------
+-------- -------- --------  Triggers -------- -------- -------- 
 --
 
 
